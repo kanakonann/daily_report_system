@@ -47,8 +47,6 @@ public class LoginFilter implements Filter {
             Employee e = (Employee)session.getAttribute("login_employee");
 
             if(!servlet_path.equals("/login")) {
-
-
                 if(e == null) {
                     ((HttpServletResponse)response).sendRedirect(context_path + "/login");
                     return;
